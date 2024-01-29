@@ -4,7 +4,7 @@
 A Virtual Bank
 
 
-![Logo](https://github.com/ANURAG-PARMAR1/Bankist/blob/master/logo.png?raw=true)
+![Logo](https://github.com/ANURAG-PARMAR1/Bankist/blob/master/icon.png?raw=true)
 
 
 ## Made With
