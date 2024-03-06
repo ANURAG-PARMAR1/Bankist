@@ -101,7 +101,7 @@ const containerMovements = document.querySelector('.movements');
 
 const btnLogin = document.querySelector('.login__btn');
 const btnTransfer = document.querySelector('.form__btn--transfer');
-const btnLoan = document.querySelector('.form__btn--loan');
+const btnAddMoney = document.querySelector('.form__btn--loan');
 const btnClose = document.querySelector('.form__btn--close');
 const btnSort = document.querySelector('.btn--sort');
 const btnSignup = document.querySelector('.signup');
@@ -232,11 +232,14 @@ const transferFnc = function(e) {
   
 };
 
-// Loan Function
-const loanFnc = function(e) {
+// Add Money Function
+const addMoney = function(e) {
   e.preventDefault();
   const amt = Number(inputLoanAmount.value);
-  const valid = currAcc.movements.find(mov => mov > Math.trunc(amt/10));
+  const realBalance = currAcc.movements.reduce(function(acc,curr,i) {
+    return acc+ curr;
+  },0);
+  const valid = realBalance>amt?true:false;
   if(valid) {
     currAcc.movements.push(amt);
     currAcc.movementsDates.push(new Date().toISOString());
@@ -269,6 +272,8 @@ const closingAccFnc = function(e) {
       
     }
     inputCloseUsername.value = inputClosePin.value = '';
+    labelWelcome.textContent = 'Log in to get started';
+
 };
 
 // signout
@@ -285,7 +290,7 @@ btnSignout.addEventListener('click',function(e) {
   document.removeEventListener('click',logInFunction);
   document.removeEventListener('click',sortFunc);
   document.removeEventListener('click',transferFnc);
-  document.removeEventListener('click',loanFnc);
+  document.removeEventListener('click',addMoney);
   document.removeEventListener('click',closingAccFnc);
 
 
@@ -350,8 +355,8 @@ btnTransfer.addEventListener('click',transferFnc);
 
   
 
-// Request Loan 
-btnLoan.addEventListener('click',loanFnc);
+// Add Money
+btnAddMoney.addEventListener('click',addMoney);
 
   
 
@@ -428,15 +433,7 @@ const currBalance = function (allMov) {
   const totalOut = formatCurr(out,allMov.locale,allMov.currency);
   labelSumOut.textContent = `${totalOut}`;
 
-  const interest = allMov.movements
-    .filter((mov) => mov > 0)
-    .map((deposit) => (deposit * allMov.interestRate) / 100)
-    .filter((int) => {
-      
-      return int >= 1;
-    })
-    .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = formatCurr(interest, allMov.locale, allMov.currency);
+  labelSumInterest.textContent = `${allMov.interestRate} %`;
 };
 // Update UI
 const updateUI = function (acc) {

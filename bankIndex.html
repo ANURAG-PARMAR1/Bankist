@@ -107,7 +107,7 @@
 
       <!-- OPERATION: LOAN -->
       <div class="operation operation--loan">
-        <h2>Request loan</h2>
+        <h2>Add money</h2>
         <form class="form form--loan">
           <input type="number" class="form__input form__input--loan-amount" />
           <button class="form__btn form__btn--loan">&rarr;</button>
@@ -147,9 +147,13 @@
         <label>Last Name</label>
         <input class="form__input--lastName" type="text" />
         <label>Pin </label>
-        <input type="number" minlength="4" max="4"  class="form--pin" />
+        <input type="number" maxlength="4" class="form--pin" />
+        
         <button class="btn">Next step &rarr;</button>
+        
       </form>
+      <br>
+      <p style="text-align: center;">***** Username will be 1st alphabet of First and Last name.*****  <p></p>
     </div>
     <div class="overlay hidden"></div>
 
