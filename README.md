@@ -74,11 +74,12 @@ A Virtual Bank
 
 
 
-### Transfer Money
+### Add Money
 
-![App Screenshot](https://github.com/ANURAG-PARMAR1/Bankist/blob/master/Transfer.png?raw=true)
+![App Screenshot](https://github.com/ANURAG-PARMAR1/Bankist/blob/master/addMoney.png?raw=true)
 
--> This function transfer money by taking User_name of the person whom you are transferring and amount that you want to transfer.
+-> This function add money to your current wallet.
+-> You can't add amount more than your wallet balance.
 
 
 
