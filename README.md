@@ -83,11 +83,11 @@ A Virtual Bank
 
 
 
-### Request for Loan 
+### Transfer Money 
 
-![App Screenshot](https://github.com/ANURAG-PARMAR1/Bankist/blob/master/Loan.png?raw=true)
+![App Screenshot](https://github.com/ANURAG-PARMAR1/Bankist/blob/master/Transfer.png?raw=true)
 
--> Loan is only provided if any of your deposit is greater than 10% of loan ammount. 
+-> This function transfers money from one bank account to another. 
 
 
 ### Cloasing Account
