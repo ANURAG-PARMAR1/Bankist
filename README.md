@@ -48,13 +48,6 @@ A Virtual Bank
 -> This Section shows testimonials given by Different people.\
 -> It is impleted using Slider, slider works on arrows, dot and keys.
 
-
-### FLow Chart
-
-![App Screenshot](https://github.com/ANURAG-PARMAR1/My-Bank/blob/master/Bankist-flowchart.png?raw=true) 
-
--> A general overview of how the things are working.
-
 ### Login page
 
 ![App Screenshot](https://github.com/ANURAG-PARMAR1/Bankist/blob/master/homePage.png?raw=true) 
