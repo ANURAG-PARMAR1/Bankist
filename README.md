@@ -106,7 +106,7 @@ A Virtual Bank
 
 ### Home Page 
 
-![App Screenshot](https://github.com/ANURAG-PARMAR1/Bankist/blob/master/inside.png?raw=true)
+![App Screenshot](https://github.com/ANURAG-PARMAR1/Bankist/blob/master/insideNew.png?raw=true)
 
 -> This is the home interface.
 
