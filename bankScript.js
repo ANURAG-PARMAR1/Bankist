@@ -188,9 +188,12 @@ signin.addEventListener('click',function(e) {
     pin:Pin,
     currency: "INR",
     locale:"hi",
+     movementsDates:[],
 
     userName: firstName[0].toLowerCase() + lastName[0].toLowerCase()
   };
+  newAccount.movements.push(1000);
+  newAccount.movementsDates.push(new Date().toISOString());
   accounts.push(newAccount);
 
   document.querySelector('.form__input--firstName').value = "";
@@ -239,7 +242,7 @@ const addMoney = function(e) {
   const realBalance = currAcc.movements.reduce(function(acc,curr,i) {
     return acc+ curr;
   },0);
-  const valid = realBalance>amt?true:false;
+  const valid = realBalance>=amt?true:false;
   if(valid) {
     currAcc.movements.push(amt);
     currAcc.movementsDates.push(new Date().toISOString());
